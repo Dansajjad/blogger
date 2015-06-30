@@ -1,0 +1,12 @@
+<head> All Articles</head>
+
+<ul id="articles">
+	<% @articles.each do |article| %>
+	<li>
+		<%= link_to article.title, article_path(article) %>  
+		<!-- link_to is a helper, article.title is what we want it to say, and article_path(atricle) is our route helper -->
+	</li>
+<% end %>
+</ul>
+
+<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
